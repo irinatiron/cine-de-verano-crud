@@ -1,0 +1,30 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "Bad Girls Go to Hell",
+      "year": "1965",
+      "director": "Doris Wishman",
+      "description": "After housewife Meg is raped by the janitor she kills him and hits the road. She travels to the Big City where she is repeatedly used and abused. And when she finally finds a safe place to live her landlady’s son turns out to be a detective, which threatens her newly found identity and peace of mind.",
+      "genre": "Drama, Crime"
+    },
+    {
+      "id": "2",
+      "title": "Función de noche",
+      "enTitle": "Night Function",
+      "year": "1981",
+      "director": "Josefina Molina",
+      "description": "In a dressing room of the theater where she performs a play by Miguel Delibes, actress Lola Herrera has a long conversation with actor Daniel Dicenta, from whom she has been separated for several years.",
+      "genre": "Drama"
+    },
+    {
+      "id": "3",
+      "title": "Sans toit ni loi",
+      "enTitle": "Vagabond",
+      "year": "1985",
+      "director": "Agnès Varda",
+      "description": "Mona Bergeron is dead, her frozen body found in a ditch in the French countryside. From this, the film flashes back to the weeks leading up to her death. Through these flashbacks, Mona gradually declines as she travels from place to place, taking odd jobs and staying with whomever will offer her a place to sleep. Mona is fiercely independent, craving freedom over comfort, but it is this desire to be free that will eventually lead to her demise.",
+      "genre": "Drama"
+    }
+  ]
+}
