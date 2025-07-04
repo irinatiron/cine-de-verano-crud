@@ -3,28 +3,42 @@
     {
       "id": "1",
       "title": "Bad Girls Go to Hell",
+      "enTitle": "Bad Girls Go to Hell",
       "year": "1965",
+      "country": "USA",
+      "primaryLanguage": "English",
+      "lenght": "70 min",
       "director": "Doris Wishman",
       "description": "After housewife Meg is raped by the janitor she kills him and hits the road. She travels to the Big City where she is repeatedly used and abused. And when she finally finds a safe place to live her landlady’s son turns out to be a detective, which threatens her newly found identity and peace of mind.",
-      "genre": "Drama, Crime"
+      "genre": "Drama, Crime",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/2/2/3/5/8/22358-bad-girls-go-to-hell-0-2000-0-3000-crop.jpg?v=f00f9c211a"
     },
     {
       "id": "2",
       "title": "Función de noche",
       "enTitle": "Night Function",
       "year": "1981",
+      "country": "Spain",
+      "primaryLanguage": "Spanish",
+      "lenght": "90 min",
       "director": "Josefina Molina",
       "description": "In a dressing room of the theater where she performs a play by Miguel Delibes, actress Lola Herrera has a long conversation with actor Daniel Dicenta, from whom she has been separated for several years.",
-      "genre": "Drama"
+      "genre": "Drama",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/2/4/7/1/7/1/247171-evening-performance-0-2000-0-3000-crop.jpg?v=42090a9822"
     },
     {
       "id": "3",
       "title": "Sans toit ni loi",
       "enTitle": "Vagabond",
       "year": "1985",
+      "country": "France",
+      "primaryLanguage": "French",
+      "lenght": "105 min",
       "director": "Agnès Varda",
       "description": "Mona Bergeron is dead, her frozen body found in a ditch in the French countryside. From this, the film flashes back to the weeks leading up to her death. Through these flashbacks, Mona gradually declines as she travels from place to place, taking odd jobs and staying with whomever will offer her a place to sleep. Mona is fiercely independent, craving freedom over comfort, but it is this desire to be free that will eventually lead to her demise.",
-      "genre": "Drama"
+      "genre": "Drama",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/2/1/1/4/5/21145-vagabond-0-2000-0-3000-crop.jpg?v=58e8e676c8"
+      
     }
   ]
 }
