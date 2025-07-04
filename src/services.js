@@ -20,8 +20,7 @@ async function printMovies() {
     `<div class="movieCard">
     <img src="${movie.poster}" alt="${movie.title}" class="moviePoster">
     <h3>${movie.title} (${movie.enTitle})</i></h3>
-    <p>Dirigido por ${movie.director}, ${movie.year}</p></div>`;
+    <p>Directed by ${movie.director}, ${movie.year}</p></div>`;
   });
   return movieList;
 }
-

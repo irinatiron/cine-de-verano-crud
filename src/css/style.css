@@ -22,12 +22,19 @@ ul {
     list-style: none;
 }
 
+/* COLOR PALETTE */
+:root {
+  --blue: #243477;
+  --black: #2c3440;
+  --pink: #d86898;
+  --white: #f3fcf0;
+}
+
 /* CUSTOM CSS */
 body {
-    font-family: Overlock, sans-serif;
-   
-    
-    color: #f0f0f0;
+    font-family: Overlock, sans-serif; 
+    background-color: var(--black);
+    color: var(--white);
 }
 
 header {
@@ -38,105 +45,41 @@ h1 {
     font-size: 2em;
     margin-bottom: 20px;
     text-align: center;
-    color: #540D6E;
+    
     text-transform: uppercase;
 }
 
 h2 {
     font-size: 1.5em;
+    margin-bottom: 15px;
     text-align: center;
-    color: #540D6E;
+    
 }
-
-/* Fixed sidenav, full height */
-.sidenav {
-    width: 18%;
-    float: left;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-    background-color: rgba(243, 252, 240, 0.6);
-    border: 1px solid rgba(243, 252, 240, 1);
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    margin-top: 25px;
-}
-
-.sidenav p {
-    padding: 10px;
-    font-size: 1.2em;
-    text-align: center;
-    color: #540D6E;
-}
-
-/* Style the sidenav links and the dropdown button */
-.sidenav a,
-.dropdown-btn {
-    padding: 6px 8px 10px 16px;
-    text-decoration: none;
-    font-size: 20px;
+button {
     display: block;
-    border: none;
-    background: none;
-    width: 100%;
-    text-align: left;
-    cursor: pointer;
-    outline: none;
-}
-
-/* Add an active class to the active dropdown button */
-.active {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
     background-color: #be95c4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
-
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-    display: none;
-    background-color: #262626;
-    padding-left: 8px;
-}
-
-.dropdown-container a {
-    color: #f0f0f0;
-}
-
-/* Optional: Style the caret down icon */
-.fa-caret-down {
-    float: right;
-    padding-right: 8px;
-}
-
-/* Some media queries for responsiveness */
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-
-    .sidenav a {
-        font-size: 18px;
-    }
-}
-
-#moviesContainer {
-    width: 80%;
+section {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px 0;
 }
 
 .movieCard {
     width: 25%;
     margin-bottom: 20px;
     background-color: rgba(243, 252, 240, 0.6);
-    border: 1px solid rgba(243, 252, 240, 1);
-    color: #262626;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    padding: 30px;
     overflow: hidden;
     margin: 5px;
 }
@@ -149,5 +92,5 @@ h2 {
 h3 {
     font-size: 1.2em;
     margin-bottom: 10px;
-    color: #540D6E;
+    
 }
