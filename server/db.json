@@ -38,7 +38,45 @@
       "description": "Mona Bergeron is dead, her frozen body found in a ditch in the French countryside. From this, the film flashes back to the weeks leading up to her death. Through these flashbacks, Mona gradually declines as she travels from place to place, taking odd jobs and staying with whomever will offer her a place to sleep. Mona is fiercely independent, craving freedom over comfort, but it is this desire to be free that will eventually lead to her demise.",
       "genre": "Drama",
       "poster": "https://a.ltrbxd.com/resized/film-poster/2/1/1/4/5/21145-vagabond-0-2000-0-3000-crop.jpg?v=58e8e676c8"
-      
+    },
+    {
+      "id": "4",
+      "title": "Cléo de 5 à 7",
+      "enTitle": "Cléo from 5 to 7",
+      "year": "1962",
+      "country": "France",
+      "primaryLanguage": "French",
+      "lenght": "90 min",
+      "director": "Agnès Varda",
+      "description": "Agnès Varda eloquently captures Paris in the sixties with this real-time portrait of a singer set adrift in the city as she awaits test results of a biopsy. A chronicle of the minutes of one woman’s life, Cléo from 5 to 7 is a spirited mix of vivid vérité and melodrama, featuring a score by Michel Legrand and cameos by Jean-Luc Godard and Anna Karina.",
+      "genre": "Drama",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/1/6/1/1/51611-cleo-from-5-to-7-0-2000-0-3000-crop.jpg?v=57e2214b3d"
+    },
+    {
+      "id": "5",
+      "title": "My Little Princess",
+      "enTitle": "My Little Princess",
+      "year": "2011",
+      "country": "France",
+      "primaryLanguage": "French",
+      "lenght": "105 min",
+      "director": "Éva Ionesco",
+      "description": "Young Violetta and her mother Hannah are a peculiar couple. Ten-year-old Violetta lives a quiet life with her grandmother, while her mother Hannah is an unpredictable photographer who lives off of the generosity of others. When Hannah forces her daughter to pose as a model, Violetta finds her life with her loving grandmother turned upside down.The resulting pictures quickly become a sensation for the trendy 70’s Paris art scene, and Violetta finds herself caught in between her new stature as an art muse and her dull childhood.",
+      "genre": "Drama",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/6/4/8/2/8/64828-my-little-princess-0-2000-0-3000-crop.jpg?v=1e20bcf332"
+    },
+    {
+      "id": "6",
+      "title": "Titane",
+      "enTitle": "Titane",
+      "year": "2021",
+      "country": "Belgium, France",
+      "primaryLanguage": "French",
+      "lenght": "108 min",
+      "director": "Julia Ducournau",
+      "description": "A woman with a metal plate in her head from a childhood car accident embarks on a bizarre journey, bringing her into contact with a firefighter who’s reunited with his missing son after 10 years.",
+      "genre": "Thriller, Horror, Science Fiction",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/5/5/6/5/5/3/556553-titane-0-2000-0-3000-crop.jpg?v=1383f3a942"
     }
   ]
 }

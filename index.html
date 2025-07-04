@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Irina Tiron">
@@ -9,19 +10,66 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body onload="printMovies()">
-     <header>
-        <h1>Cine de verano</h1>
-        <h2>¿No sabes qué ver esta noche? Cine de verano te sugiere películas dirigidas por mujeres que seguro te van a sorprender. Historias frescas, diferentes y perfectas para disfrutar al aire libre o en casa.</h2>
+    <header>
+        <h1>Cine de verano 🍹</h1>
+        <h2>¿No sabes qué ver esta noche? <span id="cineDeVerano">Cine de verano</span> te sugiere películas dirigidas
+            por mujeres que seguro te van a
+            sorprender. Historias frescas, diferentes y perfectas para disfrutar al aire libre o en casa.</h2>
+
+
+        <nav>
+            <div class="navItem"><a href="#home">Inicio</a></div>
+            <div class="navItem dropdown">
+                <button class="dropbtn">Género
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Drama</a>
+                    <a href="#">Documental</a>
+                    <a href="#">Horror</a>
+                </div>
+            </div>
+            <div class="navItem dropdown">
+                <button class="dropbtn">País
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">EE.UU</a>
+                    <a href="#">España</a>
+                    <a href="#">Francia</a>
+                </div>
+            </div>
+            <div class="navItem dropdown">
+                <button class="dropbtn">Año
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">1960s</a>
+                    <a href="#">1970s</a>
+                    <a href="#">1980s</a>
+                    <a href="#">1990s</a>
+                    <a href="#">2000s</a>
+                    <a href="#">2010s</a>
+                </div>
+            </div>
+        </nav>
+
     </header>
     <main>
-    <section id="moviesContainer"></section>
+        <section id="moviesContainer"></section>
     </main>
     <footer>
+        <div id="footer-info">
+            <p>&copy; Cine de verano. Proyecto realizado en Factoría F5.</p>
+        </div>
     </footer>
     <script src="src/services.js"></script>
 </body>
+
 </html>
