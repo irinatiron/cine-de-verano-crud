@@ -13,6 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🍹</text></svg>"></link>
 </head>
 
 <body onload="printMovies()">
@@ -21,12 +22,11 @@
         <h2>¿No sabes qué ver esta noche? <span id="cineDeVerano">Cine de verano</span> te sugiere películas dirigidas
             por mujeres que seguro te van a
             sorprender. Historias frescas, diferentes y perfectas para disfrutar al aire libre o en casa.</h2>
-
-
+            <!--
         <nav>
-            <div class="navItem"><a href="#home">Inicio</a></div>
+            <div class="navItem"><a href="/index.html">Inicio</a></div>
             <div class="navItem dropdown">
-                <button class="dropbtn">Género
+                <button type="button" class="dropbtn">Género
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="navItem dropdown">
-                <button class="dropbtn">País
+                <button type="button" class="dropbtn">País
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="navItem dropdown">
-                <button class="dropbtn">Año
+                <button type="button" class="dropbtn">Año
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -58,8 +58,8 @@
                     <a href="#">2010s</a>
                 </div>
             </div>
-        </nav>
-
+        </nav>-->
+        <i class="arrow-down" onclick="scrollDown1()"></i>
     </header>
     <main>
         <section id="moviesContainer"></section>
@@ -70,6 +70,7 @@
         </div>
     </footer>
     <script src="src/services.js"></script>
+    <script src="src/js/script.js"></script>
 </body>
 
 </html>
