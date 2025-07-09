@@ -1,4 +1,3 @@
-
 {
   "movies": [
     {
@@ -78,6 +77,19 @@
       "description": "A woman with a metal plate in her head from a childhood car accident embarks on a bizarre journey, bringing her into contact with a firefighter who’s reunited with his missing son after 10 years.",
       "genre": "Thriller, Horror, Science Fiction",
       "poster": "https://a.ltrbxd.com/resized/film-poster/5/5/6/5/5/3/556553-titane-0-2000-0-3000-crop.jpg?v=1383f3a942"
+    },
+    {
+      "id": "1737",
+      "title": "La Chimera",
+      "enTitle": "La Chimera",
+      "year": "2023",
+      "country": "es",
+      "primaryLanguage": "es",
+      "lenght": "40",
+      "director": "Alice Rohrwacher",
+      "description": "Just out of jail, rumpled English archaeologist Arthur reconnects with his wayward crew of tombaroli accomplices – a happy-go-lucky collective of itinerant grave-robbers who survive by looting Etruscan tombs and fencing the ancient treasures they dig up.",
+      "genre": "es",
+      "poster": "https://a.ltrbxd.com/resized/film-poster/7/5/2/6/2/6/752626-la-chimera-0-2000-0-3000-crop.jpg?v=8f8cf76e33"
     }
   ]
 }

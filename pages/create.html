@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Irina Tiron">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir - Cine de verano</title>
+    <link rel="stylesheet" href="../src/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%2210 0 100 100%22><text y=%22.90em%22 font-size=%2290%22>🍹</text></svg>">
+</head>
+
+<body>
+    <header>
+        <h1>Cine de verano 🍹</h1>
+        <h2>¿No sabes qué ver esta noche? <span id="cineDeVerano">Cine de verano</span> te sugiere películas dirigidas
+            por mujeres que seguro te van a
+            sorprender. Historias frescas, diferentes y perfectas para disfrutar al aire libre o en casa.</h2>
+    </header>
+    <main>
+        <h3 class="page-h3">Añadir una película</h3>
+        <p id="result"></p>
+        <form id="createForm">
+            <label for="createOriginalTitle">Título original:</label>
+            <input type="text" id="createOriginalTitle" name="originalTitle" placeholder="Título original de la película" required><br>
+
+            <label for="createEnglishTitle">Título en inglés:</label>
+            <input type="text" id="createEnglishTitle" name="englishTitle" placeholder="Título traducido al inglés de la película" required><br>
+
+            <label for="createYear">Año:</label>
+            <input type="text" id="createYear" name="year" placeholder="Año de estreno de la película" required><br>
+
+            <label for="createCountry">País:</label>
+            <input type="text" id="createCountry" name="createCountry" placeholder="País de producción de la película" required><br>
+
+            <label for="createPrimaryLanguage">Idioma principal:</label>
+            <input type="text" id="createPrimaryLanguage" name="createPrimaryLanguage" placeholder="Idioma principal de la película" required><br>
+
+            <label for="createLenght">Duración (en min):</label>
+            <input type="text" id="createLenght" name="createLenght" placeholder="90 min" required><br>
+
+            <label for="createDirector">Director:</label>
+            <input type="text" id="createDirector" name="createDirector" placeholder="Nombre del director" required><br>
+
+            <label for="createDescription">Descripción:</label>
+            <input type="text" id="createDescription" name="createDescription" placeholder="Sinopsis de la película" required><br>
+
+            <label for="createGenre">Género:</label>
+            <input type="text" id="createGenre" name="createGenre" placeholder="Ficción, drama, comedia" required><br>
+
+            <label for="createPoster">Póster:</label>
+            <input type="text" id="createPoster" name="createPoster" placeholder="URL" required><br>
+
+            <button type="submit">Añadir película</button>
+        </form>
+    </main>
+    <footer>
+        <div id="footer-info">
+            <p>&copy; Cine de verano. Proyecto realizado en Factoría F5.</p>
+        </div>
+    </footer>
+     <script src="../src/js/create.js"></script>
+    <script src="../src/services.js"></script>
+    <script src="../src/js/script.js"></script>
+</body>
+
+</html>
