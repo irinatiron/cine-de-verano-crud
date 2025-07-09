@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             throw new Error(`Error ${response.status}: ${response.statusText}`); // En caso de que no se encuentre la película por el id que hemos traido
         }
         const movie = await response.json();
+
+        // Cambia el título de la página con el nombre de la película
+        document.title = `Modificando: ${movie.title} - Cine de verano`;
+        const pageTitle = document.querySelector('.page-h3');
+        pageTitle.innerHTML = `Modificando la película: ${movie.title}`;
+
+
         // Trae los datos de la película y los muestra en el formulario de edición
         document.getElementById('movieId').value = movie.id;
         document.getElementById('title').value = movie.title;
@@ -60,10 +67,10 @@ updateForm.addEventListener('submit', async (e) => { // Escucha el evento submit
             body: JSON.stringify(updatedMovie)
         });
         if (response.ok) {
-                alert('Película actualizada correctamente, redirigiendo al inicio...');
-                localStorage.removeItem('editMovieId'); // Limpia el id del localStorage
-                window.location.href = '../index.html'; // Redirige
-                return;
+            alert('Película actualizada correctamente, redirigiendo al inicio...');
+            localStorage.removeItem('editMovieId'); // Limpia el id del localStorage
+            window.location.href = '../index.html'; // Redirige
+            return;
         } else {
             console.error(`Error al actualizar: ${response.status} ${response.statusText}`);
             alert('Error al actualizar la película');

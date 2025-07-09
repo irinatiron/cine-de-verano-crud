@@ -72,18 +72,17 @@ nav {
 .navItem {
     margin: 0 10px;
     font-weight: 200;
-    height: 50px;
     background-color: var(--orange);
     text-align: center;
 }
 
-nav a {
+.navItem a {
     float: left;
     font-size: 16px;
     color: white;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    padding: 14px 16px;
 }
 
 .dropdown {
