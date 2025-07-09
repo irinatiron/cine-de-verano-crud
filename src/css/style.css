@@ -132,6 +132,13 @@ nav a:hover,
     display: block;
 }
 
+#totalMovies {
+    text-align: center;
+    margin: 20px 0;
+    color: var(--yellow);
+    text-transform: uppercase;
+}
+
 .arrow-down {
     width: 25px;
     height: 25px;

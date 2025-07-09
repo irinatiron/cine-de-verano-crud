@@ -5,6 +5,16 @@ async function getMovies() {
   return data;
 }
 
+// Para mostrar el total de películas
+async function showMovieCount() {
+    const movies = await getMovies(); // Llama al fetch para obtener las películas
+    const total = movies.length; // Calcula el total de películas
+    const totalMoviesElement = document.getElementById('totalMovies');
+    totalMoviesElement.textContent = `Total de películas: ${total}`;
+}
+showMovieCount(); 
+
+
 // PRINT
 let moviesContainer = document.getElementById("moviesContainer");
 async function printMovies() {
