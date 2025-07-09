@@ -1,7 +1,7 @@
 // Traer los datos de una película para editarla
 document.addEventListener('DOMContentLoaded', async () => {
     const id = localStorage.getItem('editMovieId'); // Obtiene el id de la película a editar desde localStorage
-     if (!id) {
+    if (!id) {
         //window.location.href = '../index.html'; // Si no hay id, redirige al index.html, también redirige cuando ya hemos actualizado la película
         return;
     }
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!response.ok) {
             throw new Error(`Error ${response.status}: ${response.statusText}`); // En caso de que no se encuentre la película por el id que hemos traido
         }
-        const movie = await response.json();  
+        const movie = await response.json();
         // Trae los datos de la película y los muestra en el formulario de edición
         document.getElementById('movieId').value = movie.id;
         document.getElementById('title').value = movie.title;
@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 const updateForm = document.getElementById('updateForm');
 updateForm.addEventListener('submit', async (e) => { // Escucha el evento submit del formulario de actualización
     e.preventDefault();
-
     const id = document.getElementById('movieId').value;
     const updatedMovie = { // Crea un objeto con los datos del formulario
         // Utiliza el id que hemos traido del localStorage y los campos del formulario
@@ -61,10 +60,10 @@ updateForm.addEventListener('submit', async (e) => { // Escucha el evento submit
             body: JSON.stringify(updatedMovie)
         });
         if (response.ok) {
-            alert('Película actualizada correctamente, redirigiendo al inicio...');
-            localStorage.removeItem('editMovieId'); // Limpia el id del localStorage
-            window.location.href = '../index.html'; 
-            return;
+                alert('Película actualizada correctamente, redirigiendo al inicio...');
+                localStorage.removeItem('editMovieId'); // Limpia el id del localStorage
+                window.location.href = '../index.html'; // Redirige
+                return;
         } else {
             console.error(`Error al actualizar: ${response.status} ${response.statusText}`);
             alert('Error al actualizar la película');
