@@ -2,9 +2,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const createForm = document.getElementById('createForm');
     createForm.addEventListener('submit', async (e) => {
-        e.preventDefault(); // Previene los valores por defecto del formulario
+        e.preventDefault();
         const newMovie = {
-            title: document.getElementById('createOriginalTitle').value.trim(), // Trim quita los espacios en blanco de antes y después
+            title: document.getElementById('createOriginalTitle').value.trim(),
             enTitle: document.getElementById('createEnglishTitle').value.trim(),
             year: document.getElementById('createYear').value.trim(),
             country: document.getElementById('createCountry').value.trim(),
@@ -15,9 +15,33 @@ document.addEventListener('DOMContentLoaded', () => {
             genre: document.getElementById('createGenre').value.trim(),
             poster: document.getElementById('createPoster').value.trim(),
         };
-        await createMovie(newMovie);  
+        // Validación de los datos introducidos mediante expresiones regulares
+        const yearRegex = /^\d{4}$/; // Sólo cuatro cifras
+        const lettersRegex = /^[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ\-]+$/; // Letras y espacios
+        if (!yearRegex.test(newMovie.year)) {
+            alert('El año debe ser un número de 4 cifras (ej: 1999).');
+            return;
+        }
+        if (!lettersRegex.test(newMovie.country)) {
+            alert('El país debe contener solo letras y espacios.');
+            return;
+        }
+        if (!lettersRegex.test(newMovie.primaryLanguage)) {
+            alert('El idioma principal debe contener solo letras y espacios.');
+            return;
+        }
+        if (!lettersRegex.test(newMovie.director)) {
+            alert('El nombre de la directora debe contener solo letras y espacios.');
+            return;
+        }
+        // Si todo está correcto, crea la película
+        await createMovie(newMovie);
     });
 });
+
+
+// Validación mediante expresiones regulares
+
 
 // CREATE método POST
 async function createMovie(newMovie) {

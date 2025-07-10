@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <p>País: ${movie.country}</p>
             <p>Idioma principal: ${movie.primaryLanguage}</p>
             <p>Duración: ${movie.lenght}</p>
-            <p>Director: ${movie.director}</p>
+            <p>Dirigida por: ${movie.director}</p>
             <p>Género: ${movie.genre}</p>
             <p>Descripción: ${movie.description}</p>
             </div>
