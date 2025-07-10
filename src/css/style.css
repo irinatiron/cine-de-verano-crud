@@ -29,6 +29,9 @@ ul {
 }
 
 /* CUSTOM CSS */
+html, body {
+    scroll-behavior: smooth;
+}
 body {
     font-family: Noto Sans Display, sans-serif;
     background-color: var(--black);
@@ -290,6 +293,20 @@ button[type="submit"] {
     margin-bottom: 10px;
 }
 
+.top {
+  position: sticky;
+  bottom: 20px;      
+  margin-left:90%; 
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  --offset: 50px; 
+  text-decoration: none;
+  padding: 10px;
+  color: #fff;
+  background: #000;
+  border-radius: 5px;
+}
+
 /* FOOTER */
 footer {
     /* position: absolute;
@@ -337,4 +354,10 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
+    .top {
+        margin-left: 40%;
+    }
 }
+
+
+
