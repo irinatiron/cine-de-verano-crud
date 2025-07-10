@@ -14,12 +14,11 @@ async function showMovieCount() {
 }
 showMovieCount(); 
 
-
 // PRINT
 let moviesContainer = document.getElementById("moviesContainer");
 async function printMovies() {
   const movies = await getMovies();
-  let html = '';
+  let html = ''; 
   movies.forEach(movie => {
     html += `
             <div class="movieCard">
@@ -27,16 +26,13 @@ async function printMovies() {
                 <h3>${movie.title} <span class="enTitle">(${movie.enTitle || ''})</span></h3>
                 <p>Dirigido por ${movie.director}, ${movie.year}</p>
                 <div class="movieCardSettings">
-                  
                     <button type="button" class="btn-movieCard delete-btn" data-id="${movie.id}"><i class="fa-solid fa-trash"></i></button>
-                    
                     <button type="button" class="btn-movieCard edit-btn" data-id="${movie.id}"><i class="fa-solid fa-pen-to-square"></i></button>
-                    
                     <button type="button" class="btn-movieCard view-btn" data-id="${movie.id}"><i class="fa-solid fa-eye"></i></button>
                 </div>
             </div>`;
   });
-  moviesContainer.innerHTML = html;
+  moviesContainer.innerHTML = html; // Coloca en el interior de moviesContainer para cada película el código html anterior
   document.querySelectorAll('.delete-btn').forEach(button => {
     button.addEventListener('click', async (e) => {
       const id = button.getAttribute('data-id');
@@ -65,17 +61,27 @@ async function printMovies() {
 
 // DELETE método DELETE con confirmación
 async function deleteMovie(id) {
-  const confirmDelete = confirm('¿Estás seguro de que quieres eliminar esta película?'); // En el alert sale el mensaje y dos botones: cancel y OK
-  if (!confirmDelete) {
-    return; // Si el usuario punsa cancelar se cierra el alert y no se hace nada
+  // Fetch el título de la película para la confirmación
+  let movieTitle = '';
+  try {
+    const response = await fetch(`http://localhost:3000/movies/${id}`);
+    if (response.ok) {
+      const movie = await response.json();
+      movieTitle = movie.title || '';
+    }
+  } catch (error) {
+    console.error('Error fetching movie for confirmation:', error);
   }
-
+  const confirmDelete = confirm(`¿Estás seguro de que deseas eliminar la película "${movieTitle}"?`); // En el alert sale el mensaje y dos botones: cancel y OK
+  if (!confirmDelete) {
+    return; // Si el usuario pulsa cancelar se cierra el alert y no se hace nada
+  }
   try {
     const response = await fetch(`http://localhost:3000/movies/${id}`, {
       method: 'DELETE',
     });
     if (response.ok) {
-      alert('Película eliminada correctamente.');
+      alert('Película eliminada correctamente.'); // Ya estando en la página de index nos sale el alert de que se ha borrado la película
     } else {
       alert(`Error al eliminar película: ${response.status} ${response.statusText}`);
     }
@@ -84,31 +90,3 @@ async function deleteMovie(id) {
     alert(`Error al eliminar la película: ${error.message}`);
   }
 }
-
-
-
-// CREATE método POST
-// async function createMovie(newMovie) {
-//   try {
-//     const response = await fetch('http://localhost:3000/movies', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify(newMovie)
-//     });
-//     if (response.ok) {
-//       const createdMovie = await response.json();
-//       alert('Película añadida correctamente, redirigiendo al inicio...');
-//       window.location.href = '../index.html';
-//       return;
-//     } else {
-//       const errorText = await response.text();
-//       // result.textContent = `Error al añadir la película: ${response.status} ${response.statusText}`;
-//       console.error(`Error al añadir la película:`, errorText);
-//     }
-//   } catch (error) {
-//     console.error('Error:', error);
-//     // result.textContent = `Error de red o inesperado: ${error.message}`;
-//   }
-// }

@@ -2,10 +2,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const createForm = document.getElementById('createForm');
     createForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
+        e.preventDefault(); // Previene los valores por defecto del formulario
         const newMovie = {
-            title: document.getElementById('createOriginalTitle').value.trim(),
+            title: document.getElementById('createOriginalTitle').value.trim(), // Trim quita los espacios en blanco de antes y después
             enTitle: document.getElementById('createEnglishTitle').value.trim(),
             year: document.getElementById('createYear').value.trim(),
             country: document.getElementById('createCountry').value.trim(),
@@ -32,16 +31,14 @@ async function createMovie(newMovie) {
     });
     if (response.ok) {
       const createdMovie = await response.json();
-      alert('Película añadida correctamente, redirigiendo al inicio...');
+      alert('Película añadida correctamente, redirigiendo al inicio...'); // Si ha salido todo ok te sale el alert y luego te devuelve al index
       window.location.href = '../index.html';
       return;
     } else {
       const errorText = await response.text();
-      // result.textContent = `Error al añadir la película: ${response.status} ${response.statusText}`;
       console.error(`Error al añadir la película:`, errorText);
     }
   } catch (error) {
     console.error('Error:', error);
-    // result.textContent = `Error de red o inesperado: ${error.message}`;
   }
 }

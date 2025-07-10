@@ -2,23 +2,19 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const id = localStorage.getItem('editMovieId'); // Obtiene el id de la película a editar desde localStorage
     if (!id) {
-        //window.location.href = '../index.html'; // Si no hay id, redirige al index.html, también redirige cuando ya hemos actualizado la película
+        window.location.href = '../index.html'; // Si no hay id, redirige al index.html, también redirige cuando ya hemos actualizado la película
         return;
     }
-
     try {
         const response = await fetch(`http://localhost:3000/movies/${id}`);
         if (!response.ok) {
             throw new Error(`Error ${response.status}: ${response.statusText}`); // En caso de que no se encuentre la película por el id que hemos traido
         }
         const movie = await response.json();
-
         // Cambia el título de la página con el nombre de la película
         document.title = `Modificando: ${movie.title} - Cine de verano`;
         const pageTitle = document.querySelector('.page-h3');
         pageTitle.innerHTML = `Modificando la película: ${movie.title}`;
-
-
         // Trae los datos de la película y los muestra en el formulario de edición
         document.getElementById('movieId').value = movie.id;
         document.getElementById('title').value = movie.title;
@@ -57,7 +53,6 @@ updateForm.addEventListener('submit', async (e) => { // Escucha el evento submit
         genre: document.getElementById('genre').value.trim(),
         poster: document.getElementById('poster').value.trim(),
     };
-
     try {
         const response = await fetch(`http://localhost:3000/movies/${id}`, {
             method: 'PUT',

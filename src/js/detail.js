@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const id = localStorage.getItem('editMovieId'); // Trae el id de la película desde index.html
-    if (!id) {
+    if (!id) { // Si no se trae el id desde el index sale error y nos regresa a la página anterior
         alert('No se ha encontrado ninguna película');
-        window.location.href = '../index.html';
+        window.location.href = '../index.html'; 
         return;
     }
 
@@ -11,14 +11,11 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!response.ok) {
             throw new Error(`Error ${response.status}: ${response.statusText}`);
         }
-
         const movie = await response.json();
-
         // Cambia el título de la página y el h3 después de obtener los datos con el nombre de la película
         document.title = `${movie.title} - Cine de verano`;
         const pageTitle = document.querySelector('.page-h3');
         pageTitle.innerHTML = `Detalle de la película: ${movie.title}`;
-
         // Muestra todos los campos que hay en db.json con los datos de la película
         const movieDetail = document.getElementById('movieDetail');
         movieDetail.innerHTML = `
