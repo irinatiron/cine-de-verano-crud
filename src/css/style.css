@@ -74,6 +74,7 @@ nav {
     font-weight: 200;
     background-color: var(--orange);
     text-align: center;
+    font-weight: 300;
 }
 
 .navItem a {
