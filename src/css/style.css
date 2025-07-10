@@ -269,6 +269,20 @@ button[type="submit"] {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#movieDetail .moviePoster:hover {
+    transform: scale(1.03);
+    transition: transform 0.5s ease;
+}
+
+#movieDetailText {
+    background-color: var(--pink);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 30px;
 }
 
 #movieDetail p {

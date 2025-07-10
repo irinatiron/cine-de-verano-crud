@@ -27,9 +27,12 @@ async function printMovies() {
                 <h3>${movie.title} <span class="enTitle">(${movie.enTitle || ''})</span></h3>
                 <p>Dirigido por ${movie.director}, ${movie.year}</p>
                 <div class="movieCardSettings">
-                    <button type="button" class="btn-movieCard delete-btn" data-id="${movie.id}">Eliminar</button>
-                    <button type="button" class="btn-movieCard edit-btn" data-id="${movie.id}">Modificar</button>
-                    <button type="button" class="btn-movieCard view-btn" data-id="${movie.id}">Detalle</button>
+                  
+                    <button type="button" class="btn-movieCard delete-btn" data-id="${movie.id}"><i class="fa-solid fa-trash"></i></button>
+                    
+                    <button type="button" class="btn-movieCard edit-btn" data-id="${movie.id}"><i class="fa-solid fa-pen-to-square"></i></button>
+                    
+                    <button type="button" class="btn-movieCard view-btn" data-id="${movie.id}"><i class="fa-solid fa-eye"></i></button>
                 </div>
             </div>`;
   });

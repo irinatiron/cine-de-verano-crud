@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         const movieDetail = document.getElementById('movieDetail');
         movieDetail.innerHTML = `
             <img src="${movie.poster}" alt="${movie.title}" class="moviePoster">
+            <div id="movieDetailText">
             <p>Título original: ${movie.title}</p>
             <p>Título en inglés: ${movie.enTitle}</p>
             <p>Año: ${movie.year}</p>
@@ -32,6 +33,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             <p>Director: ${movie.director}</p>
             <p>Género: ${movie.genre}</p>
             <p>Descripción: ${movie.description}</p>
+            </div>
         `;
     } catch (error) {
         console.error('Error al cargar los detalles:', error);
