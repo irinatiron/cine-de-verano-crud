@@ -29,6 +29,7 @@ async function printMovies() {
                 <div class="movieCardSettings">
                     <button type="button" class="btn-movieCard delete-btn" data-id="${movie.id}">Eliminar</button>
                     <button type="button" class="btn-movieCard edit-btn" data-id="${movie.id}">Modificar</button>
+                    <button type="button" class="btn-movieCard view-btn" data-id="${movie.id}">Detalle</button>
                 </div>
             </div>`;
   });
@@ -41,8 +42,6 @@ async function printMovies() {
     });
   });
 
-
-  
   document.querySelectorAll('.edit-btn').forEach(button => {
     button.addEventListener('click', (e) => {
       const id = button.getAttribute('data-id');
@@ -50,6 +49,15 @@ async function printMovies() {
       window.location.href = 'pages/modify.html';    // Redirige a la página modify.html
     });
   });
+
+  document.querySelectorAll('.view-btn').forEach(button => {
+    button.addEventListener('click', (e) => {
+      const id = button.getAttribute('data-id');
+      localStorage.setItem('editMovieId', id);  
+      window.location.href = 'pages/detail.html';    // Redirige a la página detail.html
+    });
+  });
+
 }
 
 // DELETE método DELETE

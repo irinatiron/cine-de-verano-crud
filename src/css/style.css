@@ -201,7 +201,7 @@ p {
 
 .movieCardSettings {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
     padding: 10px;
 }
 
@@ -223,16 +223,19 @@ p {
     color: var(--yellow);
     text-transform: uppercase;
 }
+
 form {
     display: flex;
     flex-direction: column;
     width: 50%;
     margin: 0 auto;
 }
+
 label {
     margin-bottom: 5px;
     font-weight: bold;
 }
+
 input[type="text"],
 input[type="number"],
 input[type="url"] {
@@ -244,6 +247,7 @@ input[type="url"] {
     color: var(--white);
     font-size: 1em;
 }
+
 button[type="submit"] {
     background-color: var(--green);
     color: white;
@@ -254,6 +258,23 @@ button[type="submit"] {
     font-size: 1em;
     margin-bottom: 50px;
 }
+
+/* DETAIL PAGE */
+#movieDetail {
+    margin: 0 200px 50px;
+}
+
+#movieDetail .moviePoster {
+    width: 40%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#movieDetail p {
+    margin-bottom: 10px;
+}
+
 /* FOOTER */
 footer {
     /* position: absolute;
@@ -273,6 +294,17 @@ footer {
 /* MEDIA QUERIES */
 @media (max-width: 600px) {
     .movieCard {
-        width: 80%;
+        width: 100%;
     }
-}  
+
+    #movieDetail {
+        margin: 0 10px 50px;
+    }
+
+    #movieDetail .moviePoster {
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
