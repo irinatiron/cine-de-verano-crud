@@ -63,25 +63,29 @@ async function printMovies() {
 
 }
 
-// DELETE método DELETE
+// DELETE método DELETE con confirmación
 async function deleteMovie(id) {
-  // let result = document.getElementById('result');
+  const confirmDelete = confirm('¿Estás seguro de que quieres eliminar esta película?'); // En el alert sale el mensaje y dos botones: cancel y OK
+  if (!confirmDelete) {
+    return; // Si el usuario punsa cancelar se cierra el alert y no se hace nada
+  }
+
   try {
     const response = await fetch(`http://localhost:3000/movies/${id}`, {
       method: 'DELETE',
     });
-    if (response.ok) { // Response es el fetch y ok es 200
-      // result.textContent = `Película con id ${id} eliminada correctamente.`;
-      // console.log(`Película con id ${id} eliminada`);
+    if (response.ok) {
+      alert('Película eliminada correctamente.');
     } else {
-      // result.textContent = `Error al eliminar película con id ${id}.`;
-      // console.error(`Error al eliminar película con id ${id}`);
+      alert(`Error al eliminar película: ${response.status} ${response.statusText}`);
     }
   } catch (error) {
-    // console.error('Error:', error);
-    // result.textContent = `Error: ${error.message}`;
+    console.error('Error:', error);
+    alert(`Error al eliminar la película: ${error.message}`);
   }
 }
+
+
 
 // CREATE método POST
 // async function createMovie(newMovie) {
