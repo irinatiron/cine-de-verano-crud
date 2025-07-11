@@ -263,6 +263,11 @@ button[type="submit"] {
     margin-bottom: 50px;
 }
 
+button:hover {
+    transform: scale(1.03);
+    transition: transform 0.5s ease;
+}
+
 /* DETAIL PAGE */
 #movieDetail {
     margin: 0 200px 50px;
@@ -349,7 +354,7 @@ footer {
     }
     /* DETAIL PAGE */
     #movieDetail {
-        margin: 20px 40px;
+        margin: 20px 40p;
 }
 }
 
