@@ -34,7 +34,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 // UPDATE método PUT
-
 const updateForm = document.getElementById('updateForm');
 updateForm.addEventListener('submit', async (e) => { // Escucha el evento submit del formulario de actualización
     e.preventDefault();
@@ -53,12 +52,36 @@ updateForm.addEventListener('submit', async (e) => { // Escucha el evento submit
         genre: document.getElementById('genre').value.trim(),
         poster: document.getElementById('poster').value.trim(),
     };
+
+    // Validaciones mediante expresiones regulares, las mismas que en el formulario de create.js
+    const lettersRegex = /^[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ\-]+$/;
+    const yearRegex = /^\d{4}$/;
+    const currentYear = new Date().getFullYear();
+    function isValidYear(year) {
+        return yearRegex.test(year) && Number(year) >= 1895 && Number(year) <= currentYear;
+    }
+    if (!isValidYear(updatedMovie.year)) {
+        alert(`El año debe ser un número de 4 cifras entre 1895 y ${currentYear}.`);
+        return;
+    }
+    if (!lettersRegex.test(updatedMovie.country)) {
+        alert('El país debe contener solo letras y espacios.');
+        return;
+    }
+    if (!lettersRegex.test(updatedMovie.primaryLanguage)) {
+        alert('El idioma principal debe contener solo letras y espacios.');
+        return;
+    }
+    if (!lettersRegex.test(updatedMovie.director)) {
+        alert('El nombre de la directora debe contener solo letras y espacios.');
+        return;
+    }
+
+    // UPDATE método PUT
     try {
         const response = await fetch(`http://localhost:3000/movies/${id}`, {
             method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(updatedMovie)
         });
         if (response.ok) {

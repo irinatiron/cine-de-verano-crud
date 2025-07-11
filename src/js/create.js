@@ -44,10 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-// Validación mediante expresiones regulares
-
-
 // CREATE método POST
 async function createMovie(newMovie) {
   try {
