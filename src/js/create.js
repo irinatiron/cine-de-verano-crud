@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       poster: document.getElementById('createPoster').value.trim(),
     };
     // Validación de los datos introducidos mediante expresiones regulares
-    const lettersRegex = /^[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ\-]+$/; // Letras y espacios
+    const lettersRegex = /^[\p{L}\s\-',]+$/u; // Letras, espacios, tildes y comas
     const yearRegex = /^\d{4}$/; // Para que el año sea un número de 4 cifras
     const currentYear = new Date().getFullYear(); // Coge el año actual
     function isValidYear(year) {

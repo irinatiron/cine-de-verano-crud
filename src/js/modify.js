@@ -33,7 +33,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 });
 
-// UPDATE método PUT
 const updateForm = document.getElementById('updateForm');
 updateForm.addEventListener('submit', async (e) => { // Escucha el evento submit del formulario de actualización
     e.preventDefault();
@@ -54,7 +53,7 @@ updateForm.addEventListener('submit', async (e) => { // Escucha el evento submit
     };
 
     // Validaciones mediante expresiones regulares, las mismas que en el formulario de create.js
-    const lettersRegex = /^[a-zA-Z\sáéíóúÁÉÍÓÚüÜñÑ\-]+$/;
+    const lettersRegex = /^[\p{L}\s\-',]+$/u; // Letras, espacios, tildes y comas
     const yearRegex = /^\d{4}$/;
     const currentYear = new Date().getFullYear();
     function isValidYear(year) {
