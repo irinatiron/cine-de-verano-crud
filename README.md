@@ -19,13 +19,13 @@ Cine de Verano CRUD es un proyecto didáctico que tiene como objetivo aprender a
 ```
 cine-de-verano-crud/
 ├── /server
-|    └── db.json             ← Base de datos simulada con las películas
+│   └── db.json             ← Base de datos simulada con las películas
 ├── index.html               ← Página principal que muestra todas las películas
 ├── README.md                ← Documentación básica del proyecto
 ├── /src
 │   └── /css
-|   |   └── style.css        ← Estilos globales del sitio web
-|   └── /js
+│   │   └── style.css        ← Estilos globales del sitio web
+│   └── /js
 │       ├── services.js      ← Funciones que llaman a la API para el index: GET y DELETE
 │       ├── create.js        ← Lógica para crear nuevas películas y función POST
 │       ├── modify.js        ← Lógica para editar películas y función PUT
