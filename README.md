@@ -1,6 +1,12 @@
 # Cine de verano 🍹 CRUD
 Cine de Verano CRUD es un proyecto didáctico que tiene como objetivo aprender a utilizar JavaScript para construir una aplicación web sencilla que realiza operaciones CRUD (Create, Read, Update, Delete) sobre una API simulada con json-server.
 
+<img src="./assets/home.png" alt="Página inicial" style="max-width: 700px; width: 100%; margin-bottom: 12px;" />
+
+<img src="./assets/homebuttons.png" alt="Página inicial: ver, editar, eliminar" style="max-width: 700px; width: 100%; margin-bottom: 12px;" />
+
+<img src="./assets/add.png" alt="Página de añadir nueva película" style="max-width: 700px; width: 100%; margin-bottom: 12px;" />
+
 ## ⚙️ Tecnologías utilizadas
 - HTML (HyperText Markup Language)
 - CSS (Cascading Style Sheets)
